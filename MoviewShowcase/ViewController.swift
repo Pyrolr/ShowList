@@ -98,6 +98,9 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     func tapped(gesture:UITapGestureRecognizer) {
         if let cell = gesture.view as? TVShowCell {
             print("Title \(cell.IBimgTVShowTitle)")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("DetailVC") as! DetailViewController
+            self.presentViewController(vc, animated:true, completion:nil)
         }
     }
     

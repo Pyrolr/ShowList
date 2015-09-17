@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563CA1381BAB2B4400D9145A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563CA1371BAB2B4400D9145A /* DetailViewController.swift */; };
 		563D5F981BA8951800ED4449 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D5F971BA8951800ED4449 /* TVShow.swift */; };
 		565C19001BA755A4009F2D80 /* TVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C18FF1BA755A4009F2D80 /* TVShowCell.swift */; };
 		56CB246E1BA73D9700E733FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CB246D1BA73D9700E733FD /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		563CA1371BAB2B4400D9145A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		563D5F971BA8951800ED4449 /* TVShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		565C18FF1BA755A4009F2D80 /* TVShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
 		56CB246A1BA73D9700E733FD /* MoviewShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviewShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				56CB24761BA73D9700E733FD /* Info.plist */,
 				565C18FF1BA755A4009F2D80 /* TVShowCell.swift */,
 				563D5F971BA8951800ED4449 /* TVShow.swift */,
+				563CA1371BAB2B4400D9145A /* DetailViewController.swift */,
 			);
 			path = MoviewShowcase;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				56CB24701BA73D9700E733FD /* ViewController.swift in Sources */,
 				56CB246E1BA73D9700E733FD /* AppDelegate.swift in Sources */,
+				563CA1381BAB2B4400D9145A /* DetailViewController.swift in Sources */,
 				563D5F981BA8951800ED4449 /* TVShow.swift in Sources */,
 				565C19001BA755A4009F2D80 /* TVShowCell.swift in Sources */,
 			);
