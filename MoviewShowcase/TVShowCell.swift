@@ -1,5 +1,5 @@
 //
-//  MovieCell.swift
+//  TVShowCell.swift
 //  MoviewShowcase
 //
 //  Created by Hardik on 15/09/15.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class MovieCell: UICollectionViewCell {
-    @IBOutlet weak var IBimgMoview:UIImageView!
-    @IBOutlet weak var IBlblMovieTitle:UILabel!
+class TVShowCell: UICollectionViewCell {
+    @IBOutlet weak var IBimgTVShow:UIImageView!
+    @IBOutlet weak var IBimgTVShowTitle:UILabel!
     
-    func configureData(movie:Movie) {
-        if let title = movie.movieTitle {
-            IBlblMovieTitle.text = title
+    func configureData(movie:TVShow) {
+        if let title = movie.tvShowTitle {
+            IBimgTVShowTitle.text = title
         }
         
-        if let path = movie.moviePoster {
+        if let path = movie.tvShowPoster {
             let url = NSURL(string: path)
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)) {
@@ -25,7 +25,7 @@ class MovieCell: UICollectionViewCell {
                     let data = NSData(contentsOfURL: imgUrl)
                     if data != nil {
                         dispatch_async(dispatch_get_main_queue()) {
-                            self.IBimgMoview.image = UIImage(data: data!)
+                            self.IBimgTVShow.image = UIImage(data: data!)
                             
                         }
                     }

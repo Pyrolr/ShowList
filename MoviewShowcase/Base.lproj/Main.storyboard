@@ -25,7 +25,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="2gT-Mx-DLI" customClass="MovieCell" customModule="MoviewShowcase" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TVShowCell" id="2gT-Mx-DLI" customClass="TVShowCell" customModule="MoviewShowcase" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="478"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -56,8 +56,8 @@
                                         </constraints>
                                         <size key="customSize" width="304" height="478"/>
                                         <connections>
-                                            <outlet property="IBimgMoview" destination="NNu-Mx-rJg" id="lXo-Vm-L6H"/>
-                                            <outlet property="IBlblMovieTitle" destination="lhm-JN-zSJ" id="Ttg-Hi-89Y"/>
+                                            <outlet property="IBimgTVShow" destination="NNu-Mx-rJg" id="KUF-ER-UjK"/>
+                                            <outlet property="IBimgTVShowTitle" destination="lhm-JN-zSJ" id="PrC-Ig-3Jn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

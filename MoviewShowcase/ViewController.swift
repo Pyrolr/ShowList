@@ -18,7 +18,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     let defaultImageSize = CGSizeMake(269,389)
     let focusImageSize = CGSizeMake(296,428)
     
-    var arrMovie = [Movie]()
+    var arrTVShow = [TVShow]()
     
     // MARK: - Memory Managment methods
     
@@ -65,8 +65,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
                     
                     if let result = dict!["results"] as? [Dictionary<String,AnyObject>] {
                         for obj in result {
-                            let movie = Movie(MovieDict:obj)
-                            self.arrMovie.append(movie)
+                            let show = TVShow(TVShowDict:obj)
+                            self.arrTVShow.append(show)
                         }
                         
                         dispatch_async(dispatch_get_main_queue()) {
@@ -82,22 +82,22 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        if let prevView = context.previouslyFocusedView as? MovieCell {
+        if let prevView = context.previouslyFocusedView as? TVShowCell {
             UIView.animateWithDuration(0.1, animations: { () -> Void in
-                prevView.IBimgMoview.frame.size = self.defaultImageSize
+                prevView.IBimgTVShow.frame.size = self.defaultImageSize
             })
         }
         
-        if let nextView = context.nextFocusedView as? MovieCell {
+        if let nextView = context.nextFocusedView as? TVShowCell {
             UIView.animateWithDuration(0.1, animations: { () -> Void in
-                nextView.IBimgMoview.frame.size = self.focusImageSize
+                nextView.IBimgTVShow.frame.size = self.focusImageSize
             })
         }
     }
     
     func tapped(gesture:UITapGestureRecognizer) {
-        if let cell = gesture.view as? MovieCell {
-            print("Title \(cell.IBlblMovieTitle)")
+        if let cell = gesture.view as? TVShowCell {
+            print("Title \(cell.IBimgTVShowTitle)")
         }
     }
     
@@ -109,8 +109,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MovieCell", forIndexPath:indexPath) as? MovieCell {
-            let movie = arrMovie[indexPath.row]
+        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TVShowCell", forIndexPath:indexPath) as? TVShowCell {
+            let show = arrTVShow[indexPath.row]
             
             if cell.gestureRecognizers?.count == nil {
                 let tapRecognizer = UITapGestureRecognizer(target: self, action:"tapped:")
@@ -118,17 +118,17 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
                 cell.addGestureRecognizer(tapRecognizer)
             }
             
-            cell.configureData(movie)
+            cell.configureData(show)
             return cell
         } else {
-         return MovieCell()
+         return TVShowCell()
         }
     }
     
     // ---------------------------------------------------------------------
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrMovie.count
+        return arrTVShow.count
     }
     
     // ---------------------------------------------------------------------
